@@ -550,4 +550,10 @@ template {
     width: 99px;
   }
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 85%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
