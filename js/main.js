@@ -14,6 +14,5 @@ var mySwiper = new Swiper('.swiper-container', {
 var mySwiper = new Swiper('.swiper-container', {
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
   },
 });
