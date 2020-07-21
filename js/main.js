@@ -20,7 +20,6 @@ var mySwiper = new Swiper('.swiper-container', {
 ymaps.ready(init);
 
 function init() {
-
   var myMap = new ymaps.Map("map", {
     center: [7.890703, 98.294204],
     zoom: 16,
@@ -32,6 +31,5 @@ function init() {
   }, {
     'preset': 'islands#yellowStretchyIcon'
   });
-
   myMap.geoObjects.add(placemark3);
 }
