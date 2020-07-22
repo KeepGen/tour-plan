@@ -30,6 +30,12 @@ var reviewsSlider = new Swiper('.reviews-slider', {
   },
 });
 
+// Покдлючение Параллакс
+$('.parallax-window').parallax({
+  imageSrc: 'img/newsletter-bg.jpg'
+});
+
+// Подключение Карты Яндекс по API
 ymaps.ready(init);
 
 function init() {

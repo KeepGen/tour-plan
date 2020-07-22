@@ -851,6 +851,11 @@ template {
   text-transform: uppercase;
 }
 
+.parallax-window {
+  min-height: 260px;
+  background: transparent;
+}
+
 .subscribe {
   position: relative;
   width: 350px;
