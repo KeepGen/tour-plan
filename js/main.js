@@ -48,7 +48,7 @@ function init() {
   var placemark3 = new ymaps.Placemark([7.890703, 98.294709], {
     iconContent: '<strong>DoubleTree</strong> by Hilton Phuket'
   }, {
-    'preset': 'islands#yellowStretchyIcon'
+    'preset': 'islands#redStretchyIcon'
   });
   myMap.geoObjects.add(placemark3);
 }
