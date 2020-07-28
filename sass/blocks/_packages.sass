@@ -1,0 +1,172 @@
+.packages
+  padding-top: 40px
+  padding-bottom: 75px
+  &__title
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 65px
+  &-wrapper
+    display: grid
+    column-gap: 30px
+    row-gap: 30px
+    grid-template: repeat(2, 500px) / repeat(3, 350px)
+  &-item
+    display: flex
+    &__description
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      color: $light
+      width: 350px
+      height: 250px
+      padding: 30px 21px 25px 32px
+      border-radius: 0px 0px 8px 8px
+      background-color: $dark
+      &_hero
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        color: $light
+        width: 364px
+        height: 500px
+        padding: 46px 21px 30px 43px
+        border-radius: 0px 8px 8px 0px
+        background-color: $dark
+    &__stars
+      display: flex
+      justify-content: space-between
+      width: 48px
+      flex-basis: 100%
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      margin-top: 5px
+      margin-bottom: 0px
+    &__card
+      display: flex
+      flex-direction: column
+      &_hero
+        display: flex
+        flex-direction: row
+        width: 100%
+        height: 500px
+    &__shot
+      position: relative
+      width: 350px
+      height: 250px
+      border-radius: 8px 8px 0px 0px
+      overflow: hidden
+      &_hero
+        position: relative
+        height: 500px
+        border-radius: 8px 0px 0px 8px
+        overflow: hidden
+        object-fit: cover
+    &__image
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      &_hero
+        position: relative
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        width: 366px
+        height: 100%
+        object-fit: cover
+    &__flashoffer
+      position: absolute
+      min-width: 60px
+      left: 0
+      top: 26px
+      font-style: normal
+      font-weight: 600
+      font-size: 8px
+      line-height: 10px
+      color: $light
+      background-color: $primary
+      padding: 4px 9px
+      border-radius: 0px 4px 4px 0px
+      &_hero
+        position: absolute
+        min-width: 95px
+        left: 0
+        top: 26px
+        font-style: normal
+        font-weight: 600
+        font-size: 12px
+        line-height: 15px
+        color: $light
+        background-color: $primary
+        padding: 7px 11px
+        border-radius: 0px 4px 4px 0px
+    &__details
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+    &__text
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 160.6%
+    &__booking
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 67px
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      &-text
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+      &-description
+        margin-left: 14px
+    &__price
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+      &-old
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 18px
+        text-decoration-line: line-through
+        padding-bottom: 5px
+    &__order
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+    &__button
+      font-family: Nunito
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 19px
+      color: $light
+      padding: 11px 27px
+      background-color: $primary
+      border: 0
+      border-radius: 4px
+      cursor: pointer
+.packages-item:nth-child(1)
+  grid-column-start: 1
+  grid-column-end: 3
