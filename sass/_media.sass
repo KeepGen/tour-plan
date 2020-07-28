@@ -271,7 +271,7 @@
       &__stars
         display: none
     &-wrapper
-      grid-template: repeat(3, 100%) / 100%
+      grid-template: repeat(3,500px) / 100%
       row-gap: 10px
       max-width: 530px
     &-item:nth-child(1)
@@ -283,6 +283,14 @@
   .container
     width: 85%
   .packages
+    &-wrapper
+      grid-template: repeat(3, 500px) / 100%
+      row-gap: 10px
+    &-item:nth-child(1)
+      grid-column-start: 1
+      grid-column-end: 2
+    &-item:nth-child(4), &-item:nth-child(5)
+      display: none
     &-item
       &__description
         padding: 20px 20px 20px 20px
