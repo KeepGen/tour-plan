@@ -1422,6 +1422,23 @@ template {
     width: 230px;
     height: 230px;
   }
+  .packages-item__card, .packages-item__shot {
+    width: 100%;
+  }
+  .packages-item__description {
+    width: 100%;
+  }
+  .packages-item__image {
+    width: 100%;
+  }
+  .packages-wrapper {
+    -ms-grid-rows: (500px)[2];
+    -ms-grid-columns: (310px)[3];
+        grid-template: repeat(2, 500px)/repeat(3, 310px);
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+    row-gap: 15px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1487,6 +1504,38 @@ template {
   }
   .activities__card {
     margin-bottom: 20px;
+  }
+  .packages-item__card {
+    width: 340px;
+  }
+  .packages-item__card_hero {
+    width: 700px;
+  }
+  .packages-item__description {
+    width: 100%;
+  }
+  .packages-item__description_hero {
+    width: 50%;
+  }
+  .packages-item__image {
+    width: 100%;
+  }
+  .packages-item__image_hero {
+    max-width: 345px;
+  }
+  .packages-wrapper {
+    -ms-grid-rows: (500px)[3];
+    -ms-grid-columns: (340px)[2];
+        grid-template: repeat(3, 500px)/repeat(2, 340px);
+    -webkit-column-gap: 16px;
+            column-gap: 16px;
+    row-gap: 16px;
+    max-width: 700px;
+  }
+  .packages-item:nth-child(1) {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 
@@ -1613,6 +1662,49 @@ template {
     width: 48%;
     height: 255px;
   }
+  .packages__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-top: 0px;
+    margin-bottom: 45px;
+  }
+  .packages-item__card {
+    width: 100%;
+    height: 450px;
+  }
+  .packages-item__card_hero {
+    width: 100%;
+  }
+  .packages-item__shot {
+    height: 200px;
+  }
+  .packages-item__shot_hero {
+    width: 100%;
+  }
+  .packages-item__description {
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+  }
+  .packages-item__description_hero {
+    width: 100%;
+    padding: 26px 21px 20px 23px;
+  }
+  .packages-item__image {
+    width: 100%;
+    height: 200px;
+  }
+  .packages-item__image_hero {
+    max-width: 100%;
+  }
+  .packages-wrapper {
+    -ms-grid-rows: 500px (450px)[2];
+    -ms-grid-columns: (48%)[2];
+        grid-template: 500px repeat(2, 450px)/repeat(2, 48%);
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1642,11 +1734,91 @@ template {
     width: 100%;
     height: 279px;
   }
+  .packages {
+    padding-top: 20px;
+  }
+  .packages__title {
+    font-size: 18px;
+    line-height: 23px;
+    margin-top: 0px;
+    margin-bottom: 45px;
+  }
+  .packages-item__text {
+    display: none;
+  }
+  .packages-item__card {
+    width: 100%;
+    height: 500px;
+  }
+  .packages-item__card_hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .packages-item__shot {
+    height: 250px;
+  }
+  .packages-item__shot_hero {
+    height: 250px;
+  }
+  .packages-item__description {
+    width: 100%;
+    padding: 30px 21px 25px 32px;
+  }
+  .packages-item__description_hero {
+    width: 100%;
+    max-height: 250px;
+    padding: 30px 21px 25px 32px;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .packages-item__image {
+    width: 100%;
+    height: 100%;
+  }
+  .packages-item__image_hero {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .packages-item__flashoffer {
+    min-width: 95px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 7px 11px;
+  }
+  .packages-item__stars {
+    display: none;
+  }
+  .packages-wrapper {
+    -ms-grid-rows: (100%)[3];
+    -ms-grid-columns: 100%;
+        grid-template: repeat(3, 100%)/100%;
+    row-gap: 10px;
+    max-width: 530px;
+  }
+  .packages-item:nth-child(1) {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .packages-item:nth-child(4), .packages-item:nth-child(5) {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
     width: 85%;
+  }
+  .packages-item__description {
+    padding: 20px 20px 20px 20px;
+  }
+  .packages-item__description_hero {
+    padding: 20px 20px 20px 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
