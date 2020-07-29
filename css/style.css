@@ -1459,8 +1459,9 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   grid-row: 2 / 4;
@@ -2200,7 +2201,7 @@ template {
   .footer__policy_links {
     width: 100%;
   }
-  .footer__policy_item {
+  .footer_item {
     font-size: 11px;
   }
 }
