@@ -132,6 +132,20 @@
         justify-self: end
         grid-column: 5 / 7
         grid-row: 5
+  .modal
+    &__form
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      width: 340px
+      &_item:nth-child(5)
+        order: 6
+        flex-basis: 50%
+      &_item:nth-child(6)
+        order: 5
+        margin-bottom: 15px
+    &__dialog
+      padding: 33px 60px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -289,6 +303,9 @@
   .footer
     &__input
       flex-basis: 100%
+  .modal
+    &__form
+      width: 300px
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -406,6 +423,9 @@
         order: 4
         flex-basis: 100%
         margin-bottom: 14px
+  .modal
+    &__form
+      width: 250px
 @media (max-width: 480px)
   .container
     width: 85%
@@ -429,3 +449,8 @@
         width: 100%
       &_item
         font-size: 11px
+  .modal
+    &__form
+      width: 220px
+    &__dialog
+      padding: 33px 40px
