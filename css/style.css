@@ -1590,6 +1590,7 @@ template {
 .footer__message {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  min-height: 123px;
   margin-bottom: 23px;
 }
 
