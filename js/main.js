@@ -33,10 +33,10 @@ $(document).ready(function () {
   });
 
 
-  // Покдлючение Параллакс
-  $('.parallax-window').parallax({
-    imageSrc: 'img/newsletter-bg.jpg'
-  });
+  /*   // Покдлючение Параллакс
+    $('.parallax-window').parallax({
+      imageSrc: 'img/newsletter-bg.jpg'
+    }); */
 
 
   // Подключение функции активации мобильного меню
