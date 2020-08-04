@@ -51,7 +51,6 @@ img {
 
 .invalid {
   color: #EC1F46;
-  border-bottom: 1px solid #EC1F46;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1610,7 +1609,7 @@ template {
 }
 
 .footer__input_group {
-  margin-bottom: 15px;
+  height: 73px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
 }
@@ -1734,17 +1733,13 @@ template {
 
 .modal__input {
   width: 100%;
-  margin-top: 15px;
+  height: 50px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-top: 15px;
-}
-
-.modal__button {
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .modal__info {
@@ -1752,7 +1747,6 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  margin-top: 15px;
   color: #E0E0E0;
 }
 
@@ -1768,6 +1762,11 @@ template {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.modal__form_group {
+  width: 100%;
+  height: 71px;
 }
 
 .modal__form_bottom_wrapper {
@@ -2239,6 +2238,9 @@ template {
   }
   .modal__form {
     width: 300px;
+  }
+  .modal__info {
+    margin-bottom: 15px;
   }
 }
 

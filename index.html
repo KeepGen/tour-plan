@@ -701,7 +701,7 @@ quest" class="card__image">
     <!-- /.container -->
   </footer>
 
-  <div class="modal" id="booking-modal">
+  <div class="modal fadeIn" id="booking-modal">
     <div class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
@@ -710,11 +710,17 @@ quest" class="card__image">
       </a>
       <h3 class="modal__title modal__title_mb_3">Book a room</h3>
       <form action="send.php" method="POST" class="modal__form form">
-        <input type="text" class="input modal__input modal__form_item modal__form_name" placeholder="Your Full Name*"
-          name="name" minlength="3" required>
-        <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
-          name="phone" required>
-        <input type="email" class="input modal__input modal__form_item" placeholder="Email*" name="e-mail" required>
+        <div class="modal__form_group">
+          <input type="text" class="input modal__input modal__form_item modal__form_name" placeholder="Your Full Name*"
+            name="name" minlength="3" required></div>
+        <div class="modal__form_group">
+          <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
+            name="phone" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
+            name="e-mail" required>
+        </div>
         <textarea class="message modal__message modal__form_item" placeholder="Message" name="message"></textarea>
         <div class="modal__form_bottom_wrapper">
           <button class="button modal__button modal__form_item" type="submit">Send</button>

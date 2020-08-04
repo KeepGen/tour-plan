@@ -71,7 +71,7 @@ $(document).ready(function () {
       messages: {
         name: {
           required: "Please specify your name",
-          minlength: "Your name must be at least 3 symbols",
+          minlength: "At least 3 symbols required",
         },
         email: {
           required: "Email address is required",
@@ -93,7 +93,7 @@ $(document).ready(function () {
     var out = "";
     var str = this.value;
     for (var i = 0; i < str.length; i++) {
-      if (/[A-Za-z]/.test(str.charAt(i))) {
+      if (/[A-Za-zа-яА-Я\s]/.test(str.charAt(i))) {
         out = out.concat(str.charAt(i));
       }
     }
@@ -104,7 +104,7 @@ $(document).ready(function () {
     var out = "";
     var str = this.value;
     for (var i = 0; i < str.length; i++) {
-      if (/[A-Za-z]/.test(str.charAt(i))) {
+      if (/[A-Za-zа-яА-Я\s]/.test(str.charAt(i))) {
         out = out.concat(str.charAt(i));
       }
     }
