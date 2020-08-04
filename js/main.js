@@ -111,6 +111,7 @@ $(document).ready(function () {
     this.value = out;
   });
 
+  // Подключение аннимации AOS
   AOS.init();
 
 });
