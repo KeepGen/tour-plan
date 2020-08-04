@@ -32,13 +32,6 @@ $(document).ready(function () {
     },
   });
 
-
-  /*   // Покдлючение Параллакс
-    $('.parallax-window').parallax({
-      imageSrc: 'img/newsletter-bg.jpg'
-    }); */
-
-
   // Подключение функции активации мобильного меню
   var menuButton = $('.menu-button');
   menuButton.on('click', function () {
