@@ -88,4 +88,27 @@ $(document).ready(function () {
   $('.footer__form_phone').mask('+7 (999) 999-99-99');
   $('.modal__form_phone').mask('+7 (999) 999-99-99');
 
+  // Подключение маски для имени (ограничение по цифрам)
+  $(".footer__form_name").bind("input", function (event) {
+    var out = "";
+    var str = this.value;
+    for (var i = 0; i < str.length; i++) {
+      if (/[A-Za-z]/.test(str.charAt(i))) {
+        out = out.concat(str.charAt(i));
+      }
+    }
+    this.value = out;
+  });
+
+  $(".modal__form_name").bind("input", function (event) {
+    var out = "";
+    var str = this.value;
+    for (var i = 0; i < str.length; i++) {
+      if (/[A-Za-z]/.test(str.charAt(i))) {
+        out = out.concat(str.charAt(i));
+      }
+    }
+    this.value = out;
+  });
+
 });
