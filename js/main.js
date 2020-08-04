@@ -111,4 +111,6 @@ $(document).ready(function () {
     this.value = out;
   });
 
+  AOS.init();
+
 });
