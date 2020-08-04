@@ -1786,6 +1786,63 @@ template {
       flex-wrap: wrap;
 }
 
+.mail {
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+
+.mail__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mail__success_title {
+  font-size: 35px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.mail__success_text {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.mail__success_image {
+  width: 288px;
+}
+
+.mail__success_separator {
+  width: 320px;
+  height: 1px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #dbdbdb;
+}
+
+.mail__success_button {
+  width: 288px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border: none;
+  background-color: #71be34;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -2470,6 +2527,10 @@ template {
   }
   .modal__dialog {
     padding: 33px 40px;
+  }
+  .mail__success_title {
+    font-size: 25px;
+    line-height: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
