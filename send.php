@@ -43,7 +43,7 @@ try {
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;
-$mail->Body = $body;    
+$mail->Body = $body;
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 
