@@ -1193,8 +1193,7 @@ template {
   position: relative;
   width: 350px;
   height: 55px;
-  border-radius: 4px;
-  overflow: hidden;
+  /** overflow: hidden **/
 }
 
 .subscribe__input {
@@ -1202,6 +1201,7 @@ template {
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 4px;
   padding-left: 33px;
   padding-right: 75px;
   font-style: normal;
@@ -1210,15 +1210,28 @@ template {
   line-height: 18px;
 }
 
+.subscribe__input_group {
+  display: block;
+  height: 75px;
+}
+
 .subscribe__button {
   position: absolute;
   min-width: 65px;
   right: 0;
   top: 0;
   height: 100%;
+  border-radius: 0 4px 4px 0;
   border: none;
   background-color: #EC1F46;
   color: #ffffff;
+  cursor: pointer;
+}
+
+#email-error {
+  position: relative;
+  z-index: 200;
+  /** top: 55px **/
 }
 
 .reviews {
@@ -1526,9 +1539,9 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1738,6 +1751,7 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+  margin-top: 15px;
   color: #E0E0E0;
 }
 
@@ -1748,6 +1762,23 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal__form_bottom_wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1976,19 +2007,6 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 340px;
-  }
-  .modal__form_item:nth-child(5) {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .modal__form_item:nth-child(6) {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-    margin-bottom: 15px;
   }
   .modal__dialog {
     padding: 33px 60px;
@@ -2390,21 +2408,24 @@ template {
     grid-column: 1;
     margin-top: 30px;
   }
-  .footer__form_item:nth-child(4) {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-  }
-  .footer__form_item:nth-child(5) {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin-bottom: 14px;
-  }
   .modal__form {
     width: 250px;
+  }
+  .modal__form_bottom_wrapper {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .modal__button {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 

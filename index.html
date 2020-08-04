@@ -416,8 +416,10 @@
         subscribe to our
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
-      <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
-        <input class="subscribe__input" placeholder="Your email address" name="email">
+      <form action="send.php" method="POST" class="subscribe newsletter__subscribe form">
+        <div class="subscribe__input_group">
+          <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
+        </div>
         <button class="subscribe__button">Send</button>
       </form>
     </div>
@@ -712,8 +714,10 @@ quest" class="card__image">
         <input type="tel" class="input modal__input modal__form_item" placeholder="Phone Number*" name="phone" required>
         <input type="email" class="input modal__input modal__form_item" placeholder="Email*" name="email" required>
         <textarea class="message modal__message modal__form_item" placeholder="Message" name="message"></textarea>
-        <button class="button modal__button modal__form_item" type="submit">Send</button>
-        <span class="modal__info modal__form_item">* Required Fields</span>
+        <div class="modal__form_bottom_wrapper">
+          <button class="button modal__button modal__form_item" type="submit">Send</button>
+          <span class="modal__info modal__form_item">* Required Fields</span>
+        </div>
       </form>
     </div>
     <!-- /.modal__dialog -->
@@ -734,8 +738,10 @@ quest" class="card__image">
           required />
         <input type="email" class="input modal__input modal__form_item" placeholder="Email*" name="email" required />
         <textarea class="message modal__message modal__form_item" placeholder="Message" name="message"></textarea>
-        <button class="button modal__button modal__form_item" type="submit">Send</button>
-        <span class="modal__info modal__form_item">* Required Fields</span>
+        <div class="modal__form_bottom_wrapper">
+          <button class="button modal__button modal__form_item" type="submit">Send</button>
+          <span class="modal__info modal__form_item">* Required Fields</span>
+        </div>
       </form>
     </div>
     <!-- /.modal__dialog -->
