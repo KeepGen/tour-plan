@@ -71,7 +71,7 @@ $(document).ready(function () {
       messages: {
         name: {
           required: "Please specify your name",
-          minlength: "Your name must be at least 5 symbols",
+          minlength: "Your name must be at least 3 symbols",
         },
         email: {
           required: "Email address is required",
