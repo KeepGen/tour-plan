@@ -4,82 +4,109 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$email2 = $_POST['e-mail'];
-$message = $_POST['message'];
+if(!empty($_POST['e-mail'])){
 
-// Формирование самого письма
-$title = "New message from Best Tour Plan";
-$body = "
-<h2>New message</h2>
-<b>Name:</b> $name<br>
-<b>Phone:</b> $phone<br><br>
-<b>Email:</b> $email<br><br>
-<b>Message:</b><br>$message
-";
+    // Переменные, которые отправляет пользователь
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];   
+    $email = $_POST['e-mail'];
+    $message = $_POST['message'];
 
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-try {
-    $mail->isSMTP();   
-    $mail->CharSet = "UTF-8";
-    $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
-    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+    // Формирование самого письма
+    $title = "New message from Best Tour Plan";
+    $body = "
+    <h4>You have new message from Best Tour Plan website</h4>
+    <b>Name:</b> $name<br>
+    <b>Phone:</b> $phone<br><br>
+    <b>Email:</b> $email<br><br>
+    <b>Message:</b><br>$message
+    ";
 
-    // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'webdev.actions@gmail.com'; // Логин на почте
-    $mail->Password   = 'Gma#Lia#23'; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('webdev.actions@gmail.com', 'Web Developer'); // Адрес самой почты и имя отправителя
+    // Настройки PHPMailer
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    try {
+        $mail->isSMTP();   
+        $mail->CharSet = "UTF-8";
+        $mail->SMTPAuth   = true;
+        //$mail->SMTPDebug = 2;
+        $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-    // Получатель письма
-    $mail->addAddress('webdev.actions@gmail.com');  
+        // Настройки вашей почты
+        $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+        $mail->Username   = 'webdev.actions@gmail.com'; // Логин на почте
+        $mail->Password   = 'Gma#Lia#23'; // Пароль на почте
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port       = 465;
+        $mail->setFrom('webdev.actions@gmail.com', 'Web Developer'); // Адрес самой почты и имя отправителя
 
-// Отправка сообщения
-$mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;
+        // Получатель письма
+        $mail->addAddress('webdev.actions@gmail.com');  
 
-// Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";} 
-else {$result = "error";}
+    // Отправка сообщения
+    $mail->isHTML(true);
+    $mail->Subject = $title;
+    $mail->Body = $body;
 
-} catch (Exception $e) {
-    $result = "error";
-    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
-}
+    // Проверяем отравленность сообщения
+    if ($mail->send()) {$result = "success";} 
+    else {$result = "error";}
 
-// Отображение результата
-/* header('location: thankyou.html'); */
-/* echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]); */
+    } catch (Exception $e) {
+        $result = "error";
+        $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+    }
 
+    // Отображение результата
+    header('location: thankyou.html');
+    /* echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]); */
 
-if (strcmp($email2, "e-mail"))
-{
-header('location: mails.html');
-}
+} else if(!empty($_POST['email'])){
+    // Переменные, которые отправляет пользователь
 
+    $email = $_POST['email'];
 
+    // Формирование самого письма
+    $title = "Horay! You have new Subscriber!";
+    $body = "<h4>Add this e-mail to subscription list</h4><b>Email:</b> $email<br>";
 
-if (strcmp($name, "name") && (strcmp($phone, "phone") && (strcmp($email, "email") && strcmp($message, "message") )
-{
-header('location: thankyou.html');
-}
+    // Настройки PHPMailer
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
+    try {
+        $mail->isSMTP();   
+        $mail->CharSet = "UTF-8";
+        $mail->SMTPAuth   = true;
+        //$mail->SMTPDebug = 2;
+        //$mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
+         // Настройки вашей почты
+        $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+        $mail->Username   = 'webdev.actions@gmail.com'; // Логин на почте
+        $mail->Password   = 'Gma#Lia#23'; // Пароль на почте
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port       = 465;
+        $mail->setFrom('webdev.actions@gmail.com', 'Web Developer'); // Адрес самой почты и имя отправителя
 
-$query
+        // Получатель письма
+        $mail->addAddress('webdev.actions@gmail.com');    
 
-if ( $query($result) >= 1 ) {
-    // the page you want
+    // Отправка сообщения
+    $mail->isHTML(true);
+    $mail->Subject = $title;
+    $mail->Body = $body;
+
+    // Проверяем отравленность сообщения
+    if ($mail->send()) {$result = "success";} 
+    else {$result = "error";}
+
+    } catch (Exception $e) {
+        throw $e;   
+        $result = "error";
+        $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+    }
+
+    // Отображение результата
+    header('location: mails.html');
+    /* echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]); */
 } else {
-    // redirect user to another page
-    header( "Location: signup.php" ); die;
+    throw new Exception("Bad Request");    
 }
-
-?>
