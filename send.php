@@ -8,16 +8,16 @@ if(!empty($_POST['e-mail'])){
 
     // Переменные, которые отправляет пользователь
     $name = $_POST['name'];
-    $phone = $_POST['phone'];   
+    $phone = $_POST['phone'];
     $email = $_POST['e-mail'];
     $message = $_POST['message'];
 
     // Формирование самого письма
-    $title = "New message from Best Tour Plan";
+    $title = "Best Tour Plan - new message";
     $body = "
-    <h4>You have new message from Best Tour Plan website</h4>
+    <h4>You have new message from Best Tour Plan website (Modal Window):</h4>
     <b>Name:</b> $name<br>
-    <b>Phone:</b> $phone<br><br>
+    <b>Phone:</b> $phone<br>
     <b>Email:</b> $email<br><br>
     <b>Message:</b><br>$message
     ";

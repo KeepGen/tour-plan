@@ -672,16 +672,17 @@ quest" class="card__image">
         <!-- /.footer__contact_details -->
         <div class="footer__contact_form">
           <h3 class="footer__title footer__title_mb_3">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form form">
+          <form action="seend.php" method="POST" class="footer__form form">
             <div class="footer__input_group">
               <input type="text" class="input footer__input footer__form_item footer__form_name"
-                placeholder="Your Full Name*" name="name" minlength="3" required />
+                placeholder="Your Full Name*" name="names" minlength="3" required />
             </div>
             <div class="footer__input_group">
               <input type="tel" class="input footer__input footer__form_item footer__form_phone"
-                placeholder="Phone Number*" name="phone" required />
+                placeholder="Phone Number*" name="phones" required />
             </div>
-            <textarea class="message footer__message footer__form_item" placeholder="Message" name="message"></textarea>
+            <textarea class="message footer__message footer__form_item" placeholder="Message"
+              name="messages"></textarea>
             <button class="button footer__button footer__form_item" type="submit">Send</button>
             <span class="footer__info footer__form_item">* Required Fields</span>
           </form>
@@ -703,7 +704,7 @@ quest" class="card__image">
     <!-- /.container -->
   </footer>
 
-  <div class="modal fadeIn" id="booking-modal">
+  <div class="modal" id="booking-modal">
     <div class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
