@@ -8,6 +8,7 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
+$email2 = $_POST['e-mail'];
 $message = $_POST['message'];
 
 // Формирование самого письма
@@ -55,5 +56,30 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: thankyou.html');
+/* header('location: thankyou.html'); */
 /* echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]); */
+
+
+if (strcmp($email2, "e-mail"))
+{
+header('location: mails.html');
+}
+
+
+
+if (strcmp($name, "name") && (strcmp($phone, "phone") && (strcmp($email, "email") && strcmp($message, "message") )
+{
+header('location: thankyou.html');
+}
+
+
+$query
+
+if ( $query($result) >= 1 ) {
+    // the page you want
+} else {
+    // redirect user to another page
+    header( "Location: signup.php" ); die;
+}
+
+?>
