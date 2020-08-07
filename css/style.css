@@ -2071,7 +2071,7 @@ template {
   }
 }
 
-@media (max-width: 824px) {
+@media (max-width: 896px) {
   .container {
     max-width: 576px;
     width: 92%;
@@ -2538,7 +2538,29 @@ template {
   }
 }
 
-@media (max-height: 413px) {
+@media (max-height: 526px) {
+  .modal__title {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .modal__message {
+    min-height: 90px;
+  }
+  .modal__input {
+    height: 45px;
+  }
+  .modal__form_group {
+    font-size: 16px;
+    height: 65px;
+  }
+  .message {
+    font-size: 16px;
+    padding: 15px 23px;
+    margin-bottom: 13px;
+  }
+}
+
+@media (max-height: 415px) {
   .navbar-menu {
     padding: 0;
   }
@@ -2568,6 +2590,66 @@ template {
   }
   .search__input {
     min-width: 100%;
+  }
+  .modal__dialog {
+    padding: 20px 40px;
+  }
+  .modal__title {
+    margin: 7px 0;
+  }
+  .modal__input {
+    height: 35px;
+  }
+  .modal__form_group {
+    font-size: 14px;
+    height: 53px;
+  }
+  .modal__form_name {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  .modal__message {
+    min-height: 70px;
+  }
+  .modal__button {
+    min-height: 40px;
+    padding: 15px;
+  }
+  .input {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    padding: 0 10px;
+  }
+  .message {
+    font-size: 14px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-height: 357px) {
+  .modal__dialog {
+    padding: 15px 40px;
+  }
+  .modal__button {
+    padding: 12px;
+  }
+  .modal__form_group {
+    font-size: 14px;
+    height: 52px;
+  }
+  .modal__title {
+    margin: 0;
+  }
+  .modal__message {
+    min-height: 60px;
+  }
+  .modal__info {
+    margin-bottom: 6px;
+  }
+  .message {
+    margin-bottom: 9px;
+    padding: 8px 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -147,7 +147,7 @@
       width: 340px
     &__dialog
       padding: 33px 60px
-@media (max-width: 824px)
+@media (max-width: 896px)
   .container
     max-width: 576px
     width: 92%
@@ -470,7 +470,24 @@
   .search
     &__input
       width: 260px
-@media (max-height: 413px)
+@media (max-height: 526px)
+  .modal
+    &__title
+      margin-top: 0px
+      margin-bottom: 5px
+    &__message
+      min-height: 90px
+    &__input
+      height: 45px
+    &__form
+      &_group
+        font-size: 16px
+        height: 65px
+  .message
+    font-size: 16px
+    padding: 15px 23px
+    margin-bottom: 13px
+@media (max-height: 415px)
   .navbar
     &-menu
       padding: 0
@@ -495,3 +512,47 @@
   .search
     &__input
       min-width: 100%
+  .modal
+    &__dialog
+      padding: 20px 40px
+    &__title
+      margin: 7px 0
+    &__input
+      height: 35px
+    &__form
+      &_group
+        font-size: 14px
+        height: 53px
+      &_name
+        flex-basis: 45%
+    &__message
+      min-height: 70px
+    &__button
+      min-height: 40px
+      padding: 15px
+  .input
+    flex-basis: 45%
+    padding: 0 10px
+  .message
+    font-size: 14px
+    padding: 10px 10px
+    margin-bottom: 10px
+@media (max-height: 357px)
+  .modal
+    &__dialog
+      padding: 15px 40px
+    &__button
+      padding: 12px
+    &__form
+      &_group
+        font-size: 14px
+        height: 52px
+    &__title
+      margin: 0
+    &__message
+      min-height: 60px
+    &__info
+      margin-bottom: 6px
+  .message
+    margin-bottom: 9px
+    padding: 8px 10px
