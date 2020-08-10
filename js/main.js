@@ -36,6 +36,9 @@ $(document).ready(function () {
   var menuButton = $('.menu-button');
   menuButton.on('click', function () {
     $(".navbar-bottom").toggleClass('navbar-bottom_visible');
+    $("html").toggleClass('hide');
+    $("body").toggleClass('hide');
+    $('.navbar__mobile_fixed').toggleClass('hide');
   });
 
   var modalButton = $("[data-toggle=modal]");
@@ -47,6 +50,9 @@ $(document).ready(function () {
     var targetModal = $(this).attr("data-href");
     $(targetModal).find(".modal__overlay").addClass("modal__overlay_visible");
     $(targetModal).find(".modal__dialog").addClass("modal__dialog_visible");
+    $('html').addClass('hide');
+    $('body').addClass('hide');
+    $('.navbar__mobile_fixed').addClass('hide');
   }
 
   function closeModal(event) {
@@ -55,12 +61,18 @@ $(document).ready(function () {
     var modalDialog = $(".modal__dialog");
     modalOverlay.removeClass("modal__overlay_visible");
     modalDialog.removeClass("modal__dialog_visible");
+    $('html').removeClass('hide');
+    $('body').removeClass('hide');
+    $('.navbar__mobile_fixed').removeClass('hide');
   }
 
   $(document).keyup(function (event) {
     if (event.which == '27') {
       $('.modal__overlay').removeClass('modal__overlay_visible');
       $('.modal__dialog').removeClass('modal__dialog_visible');
+      $('html').removeClass('hide');
+      $('body').removeClass('hide');
+      $('.navbar__mobile_fixed').removeClass('hide');
     }
   });
 
@@ -79,6 +91,11 @@ $(document).ready(function () {
         },
         phone: {
           required: "Phone number is required",
+          minlength: "Valid number is required",
+        },
+        phones: {
+          required: "Phone number is required",
+          minlength: "Valid number is required",
         },
       },
     });
@@ -87,6 +104,7 @@ $(document).ready(function () {
   // Подключение масок для номеров телефонов
   $('.footer__form_phone').mask('+7 (999) 999-99-99');
   $('.modal__form_phone').mask('+7 (999) 999-99-99');
+
 
   // Подключение маски для имени (ограничение по цифрам)
   $(".footer__form_name").bind("input", function (event) {

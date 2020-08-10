@@ -185,26 +185,38 @@
               <div class="footer__icon_wrapper">
                 <img class="footer__icon" src="img/footer-phone-call.svg" alt="icon: phone call">
               </div>
-              Tel (business hours) : 269 1500 <br>
-              Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br>
-              Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+              <div class="footer__item_tel">
+                <span>Tel (business hours): <a class="footer__item_tel_clear" href="tel:2691500">269 1500</a></span>
+                <br>
+                <span>Tel (hotline) Monday - Saturday: <a class="footer__item_tel_clear"
+                    href="tel:52-56-61-38">52-56-61-38</a> (08:00 am –
+                  20:00&nbsp;pm)</span> <br>
+                <span>Tel (hotline) Sunday: <a class="footer__item_tel_clear" href="tel:52-56-61-38">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)</span>
+              </div>
             </li>
             <li class="footer__item footer__item_mb_2">
               <div class="footer__icon_wrapper">
                 <img class="footer__icon" src="img/email.svg" alt="icon: email">
               </div>
-              cherly.lawson@example.com
+              <a class="footer__item_clear" href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
             </li>
           </ul>
         </div>
         <!-- /.footer__contact_details -->
         <div class="footer__contact_form">
-          <h3 class="footer__title footer__title_mb_3">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input footer__form_item" placeholder="Your Full Name*" name="name">
-            <input type="text" class="input footer__input footer__form_item" placeholder="Phone Number*" name="phone">
-            <textarea class="footer__message footer__form_item" cols="24" rows="6" placeholder="Message"
-              name="message"></textarea>
+          <h3 class="footer__title footer__title_mb_3_1">Send us a message</h3>
+          <form action="seend.php" method="POST" class="footer__form form">
+            <div class="footer__input_group">
+              <input type="text" class="input footer__input footer__form_item footer__form_name"
+                placeholder="Your Full Name*" name="names" minlength="3" required />
+            </div>
+            <div class="footer__input_group">
+              <input type="tel" class="input footer__input footer__form_item footer__form_phone"
+                placeholder="Phone Number*" name="phones" minlength="18" required />
+            </div>
+            <textarea class="message footer__message footer__form_item" placeholder="Message"
+              name="messages"></textarea>
             <button class="button footer__button footer__form_item" type="submit">Send</button>
             <span class="footer__info footer__form_item">* Required Fields</span>
           </form>
@@ -225,7 +237,11 @@
     </div>
     <!-- /.container -->
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

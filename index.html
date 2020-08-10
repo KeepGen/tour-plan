@@ -112,11 +112,13 @@
         <div class="hotel-info__text">
           <div class="hotel-wrapper">
             <div class="stars">
-              <img src="img/star.svg" alt="star">
-              <img src="img/star.svg" alt="star">
-              <img src="img/star.svg" alt="star">
-              <img src="img/star.svg" alt="star">
-              <img src="img/star.svg" alt="star">
+              <div class="stars__group">
+                <img src="img/star.svg" alt="star">
+                <img src="img/star.svg" alt="star">
+                <img src="img/star.svg" alt="star">
+                <img src="img/star.svg" alt="star">
+                <img src="img/star.svg" alt="star">
+              </div>
             </div>
             <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
             <span class="offer hotel-info__offer">Flash Offer</span>
@@ -258,7 +260,7 @@
                 <div class="packages-item__price-old">$ 10,500</div>
                 <div class="packages-item__price">$ 8,500</div>
               </div>
-              <button class="packages-item__button">Book Now</button>
+              <button class="packages-item__button" data-toggle="modal" data-href="#packages1-modal">Book Now</button>
             </div>
             <!-- /.packages-item_order -->
           </div>
@@ -293,7 +295,7 @@
                 <div class="packages-item__price-old">$ 8,500</div>
                 <div class="packages-item__price">$ 3,000</div>
               </div>
-              <button class="packages-item__button">Book Now</button>
+              <button class="packages-item__button" data-toggle="modal" data-href="#packages2-modal">Book Now</button>
             </div>
             <!-- /.packages-item_order -->
           </div>
@@ -328,7 +330,7 @@
                 <div class="packages-item__price-old">$ 10,500</div>
                 <div class="packages-item__price">$ 9,500</div>
               </div>
-              <button class="packages-item__button">Book Now</button>
+              <button class="packages-item__button" data-toggle="modal" data-href="#packages3-modal">Book Now</button>
             </div>
             <!-- /.packages-item_order -->
           </div>
@@ -363,7 +365,7 @@
                 <div class="packages-item__price-old">$ 4,500</div>
                 <div class="packages-item__price">$ 2,500</div>
               </div>
-              <button class="packages-item__button">Book Now</button>
+              <button class="packages-item__button" data-toggle="modal" data-href="#packages4-modal">Book Now</button>
             </div>
             <!-- /.packages-item_order -->
           </div>
@@ -398,7 +400,7 @@
                 <div class="packages-item__price-old">$ 6,500</div>
                 <div class="packages-item__price">$ 3,500</div>
               </div>
-              <button class="packages-item__button">Book Now</button>
+              <button class="packages-item__button" data-toggle="modal" data-href="#packages5-modal">Book Now</button>
             </div>
             <!-- /.packages-item_order -->
           </div>
@@ -428,14 +430,15 @@
   </section>
   <section class="reviews">
     <div class="container">
-      <h2 class="reviews__title">What people think about&nbsp;us</h2>
+      <h2 class="reviews__title">What people thinks about&nbsp;us</h2>
       <div class="swiper-container reviews-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="reviews-slider__item">
               <div class="reviews-slider__profile">
                 <img src="img/reviews-avatar-1.jpg" alt="Photo: Antony Abraham" class="reviews-slider__avatar">
-                <h3 class="reviews-slider__username">Antony Abraham</h3>
+                <h3 class="reviews-slider__username">Antony Abraham
+                </h3>
                 <span class="reviews-slider__date">Stayed 15 Nov, 2019</span>
                 <div class="reviews-slider__rating">
                   <img src="img/star.svg" alt="star">
@@ -559,7 +562,7 @@
           <img src="img/activity-1.jpg" alt="The curious corner 
 of chamarel" class="card__image">
           <h3 class="card__title">The curious corner
-            of chamarel</h3>
+            of&nbsp;chamarel</h3>
           <button data-toggle="modal" data-href="#activitiy1-modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
@@ -575,7 +578,7 @@ course" class="card__image">
           <img src="img/activity-3.jpg" alt="Tamarind falls hiking
 trip - full day" class="card__image">
           <h3 class="card__title">Tamarind falls hiking
-            trip - full day</h3>
+            trip&nbsp;-&nbsp;full day</h3>
           <button data-toggle="modal" data-href="#activitiy3-modal" class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
@@ -656,22 +659,26 @@ quest" class="card__image">
                 <img class="footer__icon" src="img/footer-phone-call.svg" alt="icon: phone call">
               </div>
               <div class="footer__item_tel">
-                <span>Tel (business hours): 269 1500</span> <br>
-                <span>Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00&nbsp;pm)</span> <br>
-                <span>Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</span>
+                <span>Tel (business hours): <a class="footer__item_tel_clear" href="tel:2691500">269 1500</a></span>
+                <br>
+                <span>Tel (hotline) Monday - Saturday: <a class="footer__item_tel_clear"
+                    href="tel:52-56-61-38">52-56-61-38</a> (08:00 am –
+                  20:00&nbsp;pm)</span> <br>
+                <span>Tel (hotline) Sunday: <a class="footer__item_tel_clear" href="tel:52-56-61-38">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)</span>
               </div>
             </li>
             <li class="footer__item footer__item_mb_2">
               <div class="footer__icon_wrapper">
                 <img class="footer__icon" src="img/email.svg" alt="icon: email">
               </div>
-              cherly.lawson@example.com
+              <a class="footer__item_clear" href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
             </li>
           </ul>
         </div>
         <!-- /.footer__contact_details -->
         <div class="footer__contact_form">
-          <h3 class="footer__title footer__title_mb_3">Send us a message</h3>
+          <h3 class="footer__title footer__title_mb_3_1">Send us a message</h3>
           <form action="seend.php" method="POST" class="footer__form form">
             <div class="footer__input_group">
               <input type="text" class="input footer__input footer__form_item footer__form_name"
@@ -679,7 +686,7 @@ quest" class="card__image">
             </div>
             <div class="footer__input_group">
               <input type="tel" class="input footer__input footer__form_item footer__form_phone"
-                placeholder="Phone Number*" name="phones" required />
+                placeholder="Phone Number*" name="phones" minlength="18" required />
             </div>
             <textarea class="message footer__message footer__form_item" placeholder="Message"
               name="messages"></textarea>
@@ -718,7 +725,7 @@ quest" class="card__image">
             name="name" minlength="3" required></div>
         <div class="modal__form_group">
           <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
-            name="phone" required>
+            name="phone" minlength="18" required>
         </div>
         <div class="modal__form_group">
           <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
@@ -751,7 +758,7 @@ quest" class="card__image">
             name="name" minlength="3" required></div>
         <div class="modal__form_group">
           <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
-            name="phone" required>
+            name="phone" minlength="18" required>
         </div>
         <div class="modal__form_group">
           <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
@@ -783,7 +790,7 @@ quest" class="card__image">
             name="name" minlength="3" required></div>
         <div class="modal__form_group">
           <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
-            name="phone" required>
+            name="phone" minlength="18" required>
         </div>
         <div class="modal__form_group">
           <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
@@ -812,10 +819,11 @@ quest" class="card__image">
       <form action="send.php" method="POST" class="modal__form form">
         <div class="modal__form_group">
           <input type="text" class="input modal__input modal__form_item modal__form_name" placeholder="Your Full Name*"
-            name="name" minlength="3" required></div>
+            name="name" minlength="3" required>
+        </div>
         <div class="modal__form_group">
           <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
-            name="phone" required>
+            name="phone" minlength="18" required>
         </div>
         <div class="modal__form_group">
           <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
@@ -847,7 +855,172 @@ quest" class="card__image">
             name="name" minlength="3" required></div>
         <div class="modal__form_group">
           <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
-            name="phone" required>
+            name="phone" minlength="18" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
+            name="e-mail" required>
+        </div>
+        <textarea class="message modal__message modal__form_item" placeholder="Message" name="message"></textarea>
+        <div class="modal__form_bottom_wrapper">
+          <button class="button modal__button modal__form_item" type="submit">Send</button>
+          <span class="modal__info modal__form_item">* Required Fields</span>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+
+
+  <div class="modal" id="packages1-modal">
+    <div class="modal__overlay"></div>
+    <!-- /.modal__overlay -->
+    <div class="modal__dialog">
+      <a href="#" class="modal__close">
+        <img src="img/close.svg" alt="icon: close">
+      </a>
+      <h3 class="modal__title modal__title_mb_3">Hotel Blue Haven</h3>
+      <form action="send.php" method="POST" class="modal__form form">
+        <div class="modal__form_group">
+          <input type="text" class="input modal__input modal__form_item modal__form_name" placeholder="Your Full Name*"
+            name="name" minlength="3" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
+            name="phone" minlength="18" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
+            name="e-mail" required>
+        </div>
+        <textarea class="message modal__message modal__form_item" placeholder="Message" name="message"></textarea>
+        <div class="modal__form_bottom_wrapper">
+          <button class="button modal__button modal__form_item" type="submit">Send</button>
+          <span class="modal__info modal__form_item">* Required Fields</span>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+
+
+  <div class="modal" id="packages2-modal">
+    <div class="modal__overlay"></div>
+    <!-- /.modal__overlay -->
+    <div class="modal__dialog">
+      <a href="#" class="modal__close">
+        <img src="img/close.svg" alt="icon: close">
+      </a>
+      <h3 class="modal__title modal__title_mb_3">LUX* Belle Mare Hotel</h3>
+      <form action="send.php" method="POST" class="modal__form form">
+        <div class="modal__form_group">
+          <input type="text" class="input modal__input modal__form_item modal__form_name" placeholder="Your Full Name*"
+            name="name" minlength="3" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
+            name="phone" minlength="18" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
+            name="e-mail" required>
+        </div>
+        <textarea class="message modal__message modal__form_item" placeholder="Message" name="message"></textarea>
+        <div class="modal__form_bottom_wrapper">
+          <button class="button modal__button modal__form_item" type="submit">Send</button>
+          <span class="modal__info modal__form_item">* Required Fields</span>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+
+
+  <div class="modal" id="packages3-modal">
+    <div class="modal__overlay"></div>
+    <!-- /.modal__overlay -->
+    <div class="modal__dialog">
+      <a href="#" class="modal__close">
+        <img src="img/close.svg" alt="icon: close">
+      </a>
+      <h3 class="modal__title modal__title_mb_3">White Palace Hotel</h3>
+      <form action="send.php" method="POST" class="modal__form form">
+        <div class="modal__form_group">
+          <input type="text" class="input modal__input modal__form_item modal__form_name" placeholder="Your Full Name*"
+            name="name" minlength="3" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
+            name="phone" minlength="18" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
+            name="e-mail" required>
+        </div>
+        <textarea class="message modal__message modal__form_item" placeholder="Message" name="message"></textarea>
+        <div class="modal__form_bottom_wrapper">
+          <button class="button modal__button modal__form_item" type="submit">Send</button>
+          <span class="modal__info modal__form_item">* Required Fields</span>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+
+
+  <div class="modal" id="packages4-modal">
+    <div class="modal__overlay"></div>
+    <!-- /.modal__overlay -->
+    <div class="modal__dialog">
+      <a href="#" class="modal__close">
+        <img src="img/close.svg" alt="icon: close">
+      </a>
+      <h3 class="modal__title modal__title_mb_3">Luxury Place Hotel</h3>
+      <form action="send.php" method="POST" class="modal__form form">
+        <div class="modal__form_group">
+          <input type="text" class="input modal__input modal__form_item modal__form_name" placeholder="Your Full Name*"
+            name="name" minlength="3" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
+            name="phone" minlength="18" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
+            name="e-mail" required>
+        </div>
+        <textarea class="message modal__message modal__form_item" placeholder="Message" name="message"></textarea>
+        <div class="modal__form_bottom_wrapper">
+          <button class="button modal__button modal__form_item" type="submit">Send</button>
+          <span class="modal__info modal__form_item">* Required Fields</span>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+
+
+  <div class="modal" id="packages5-modal">
+    <div class="modal__overlay"></div>
+    <!-- /.modal__overlay -->
+    <div class="modal__dialog">
+      <a href="#" class="modal__close">
+        <img src="img/close.svg" alt="icon: close">
+      </a>
+      <h3 class="modal__title modal__title_mb_3">Hotel Five Star</h3>
+      <form action="send.php" method="POST" class="modal__form form">
+        <div class="modal__form_group">
+          <input type="text" class="input modal__input modal__form_item modal__form_name" placeholder="Your Full Name*"
+            name="name" minlength="3" required>
+        </div>
+        <div class="modal__form_group">
+          <input type="tel" class="input modal__input modal__form_item modal__form_phone" placeholder="Phone Number*"
+            name="phone" minlength="18" required>
         </div>
         <div class="modal__form_group">
           <input type="email" class="input modal__input modal__form_item modal__form_email" placeholder="Email*"
